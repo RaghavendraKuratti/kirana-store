@@ -1,0 +1,7 @@
+{
+  "name": "kirana-store",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "kirana-store",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
