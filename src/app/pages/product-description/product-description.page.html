@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button [routerLink]="['/home']" >
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Product Description</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="end" name="cart-sharp"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-slides [options]="slideOpts" class="ion-margin-bottom">
+    <ion-slide *ngFor="let img of products | async">
+      <img [src]="img.img">
+    </ion-slide>
+  </ion-slides>
+  <ion-card class="ion-no-margin">
+    <ion-card-header>
+      <ion-card-title>Garnier Men Auto Fight Anti-Pimple Face Wash</ion-card-title>
+      <ion-card-subtitle>By Daily Fresh</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content class="ion-no-padding">
+      <ion-item>
+        <ion-grid fixed class="ion-no-padding price">
+          <ion-row>
+            <ion-col size="8" class="ion-no-padding">
+              <ion-label> <span class="final-price">{{ 144 | currency : 'INR'}}</span>   <del>{{ 170 | currency : 'INR'}}</del>  </ion-label>
+              <ion-badge color="primary">15% OFF</ion-badge>
+            </ion-col>
+            <ion-col size="4" class="ion-no-padding">
+              <ion-button  shape="round" fill="outline">
+                Add To Cart
+              </ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-item>
+      <ion-item lines="none">
+        <label> Description </label>
+      </ion-item>
+      <ion-item lines="none">
+        <label> Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only five
+          centuries, but also the leap into electronic typesetting, remaining
+          essentially unchanged. It was popularised in the 1960s with the release of
+          Letraset sheets containing Lorem Ipsum passages, and more recently with
+          desktop publishing software like Aldus PageMaker including versions of
+          Lorem Ipsum.
+        </label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+<ion-footer>
+  <ion-button expand="full" fill="solid" [routerLink]="['/home']">
+    Continue Shopping
+  </ion-button>
+</ion-footer>

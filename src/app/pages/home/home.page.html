@@ -1,0 +1,16 @@
+<app-header></app-header>
+<ion-content>
+  <ion-item lines="none">
+    <ion-label>Shop by Category</ion-label>
+    <ion-buttons slot="end" class="ion-no-margin" [routerLink]="['/category']" >
+      <ion-button>
+        View All
+        <ion-icon slot="end" name="chevron-forward-sharp"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-item>
+
+   <app-categories [lnegth]="6"></app-categories>
+   <app-product></app-product>
+   <app-product></app-product>
+</ion-content>

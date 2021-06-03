@@ -1,0 +1,25 @@
+<ion-item lines="none">
+  <ion-label>Explore Something New</ion-label>
+  <ion-buttons slot="end" class="ion-no-margin">
+    <ion-button>
+      View All
+      <ion-icon slot="end" name="chevron-forward-sharp"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+</ion-item>
+
+<ion-slides [options]="slideOpts" class="ion-padding">
+  <ion-slide *ngFor="let prod of products | async">
+    <ion-card class="ion-no-margin" (click)="navigateToDescription()">
+      <div class="offer-tag">
+        <span> {{prod.offer}}% Off</span>
+      </div>
+      <img [src]="prod.img">
+      <div class="price" >
+        <span>{{prod.finalprice | currency:'INR'}}</span>
+        <span>MRP: <del>{{prod.price | currency:'INR'}}</del> </span>
+        <span class="text-ellips-2line">{{prod.name}}</span>
+      </div>
+    </ion-card>
+  </ion-slide>
+</ion-slides>

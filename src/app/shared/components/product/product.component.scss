@@ -1,0 +1,45 @@
+
+ion-item {
+  ion-label {
+    font-size: 14px;
+  }
+  ion-button {
+    font-size: 14px;
+    ion-icon {
+      font-size: 14px;
+    }
+  }
+}
+
+ion-card {
+  width: 150px;
+  height: 180px;
+  overflow: visible;
+  .offer-tag {
+    background: url(https://www.jiomart.com/assets/version1620668133/jiomsite/images/icons/offer_bg.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    color: #ffffff;
+    font-size: 12px;
+    top: -10px;
+    left: -10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  img {
+    height: 100px;
+  }
+  .price {
+    display: flex;
+    flex-direction: column;
+    font-weight: 900;
+    padding: 5px 10px 5px 10px;
+    text-align: initial;
+    font-size: 12px;
+  }
+}

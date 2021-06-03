@@ -1,0 +1,21 @@
+<ion-header class="ion-no-border" >
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="end" name="cart-sharp"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="start">
+      <ion-button [href]="['/stores']">
+        <div class="title">
+          <span><ion-icon name="navigate"></ion-icon>Change Store</span>
+          <span> Welcome to Daily Fresh</span>
+        </div>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-toolbar class="ion-no-padding">
+    <ion-searchbar placeholder="fruits, veggies, etc"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>

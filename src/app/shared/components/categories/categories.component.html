@@ -1,0 +1,13 @@
+
+<ion-list>
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="4" *ngFor="let cat of categories | async">
+        <ion-card  class="ion-no-margin ion-text-center">
+          <img [src]="cat.img">
+          <h4 class="ion-no-margin text-ellips"> {{cat.label}} </h4>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-list>
