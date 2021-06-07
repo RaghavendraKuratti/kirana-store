@@ -1,0 +1,36 @@
+ion-content {
+  --background: url('../../../assets/img/bg-kirana.jpg') no-repeat center center / cover;
+  .login-page {
+    .info {
+      h2 {
+        font-size: 20px;
+        font-weight: 900;
+      }
+      p {
+        font-size: 16px;
+        font-weight: 600;
+      }
+    }
+    background-color: #ffffff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    ion-item {
+      --background: transparent;
+    }
+    ion-button {
+      margin-top: 30px;
+      margin-left: 10px;
+      margin-right: 10px;
+      font-weight: 900;
+    }
+    ion-text {
+      h1 {
+        font-size: 14px;
+      }
+    }
+  }
+}

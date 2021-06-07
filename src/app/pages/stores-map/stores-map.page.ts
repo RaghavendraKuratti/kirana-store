@@ -1,7 +1,7 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { async, Observable } from 'rxjs';
-import { Store } from 'src/app/shared/models/product';
-import { ProductService } from 'src/app/shared/services/product.service';
+import { Store } from 'src/app/SharedProviders/models/product';
+import { ProductService } from 'src/app/SharedProviders/services/product.service';
 
 declare let google: any;
 

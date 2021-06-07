@@ -1,0 +1,43 @@
+
+<ion-content [fullscreen]='true'>
+  <div class="login-page">
+    <div class="info ion-text-center">
+      <h2>Welcome Back</h2>
+      <p>to Kirana Store</p>
+    </div>
+    <form [formGroup]="loginForm">
+      <ion-item lines="none">
+        <ion-icon slot="start" name="mail-sharp"></ion-icon>
+        <ion-input name="email" type="text" placeholder="Email"  formControlName="email"></ion-input>
+      </ion-item>
+      <div class="error-div">
+        <ng-container *ngIf="f.email.touched && f.email.invalid" >
+          <ng-container *ngFor="let validation of validationsMessages.email">
+            <ion-note  color="danger" *ngIf="f.email.hasError(validation.type)"> {{ validation.message }} </ion-note>
+          </ng-container>
+        </ng-container>
+      </div>
+      <ion-item lines="none">
+        <ion-icon slot="start" name="key-sharp"></ion-icon>
+        <ion-icon slot="end" (click)="showPassword = !showPassword" [name]="showPassword ? 'eye-sharp' : 'eye-off-sharp'"></ion-icon>
+        <ion-input name="pwd" [type]="showPassword ? 'text':'password'" placeholder="Password"  formControlName="pwd"></ion-input>
+      </ion-item>
+      <div class="error-div">
+        <ng-container *ngIf="f.pwd.touched && f.pwd.invalid" >
+          <ng-container *ngFor="let validation of validationsMessages.pwd">
+            <ion-note  color="danger" *ngIf="f.pwd.hasError(validation.type)"> {{ validation.message }} </ion-note>
+          </ng-container>
+        </ng-container>
+      </div>
+      <ion-button [disabled]="!loginForm.valid"  (click)="login()" expand="full" fill="solid">
+        Login
+      </ion-button>
+    </form>
+    <ion-text class="ion-text-center">
+      <h1>Forgot Password?</h1>
+    </ion-text>
+    <ion-button [routerLink]="['/signup']" expand="full">
+      Sign up
+    </ion-button>
+  </div>
+</ion-content>

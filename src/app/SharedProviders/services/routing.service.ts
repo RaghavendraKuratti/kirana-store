@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { NavController } from '@ionic/angular';
 enum Routes {
   productDescription = '/product-description',
   storeMap = '/stores-map',
@@ -10,9 +11,9 @@ enum Routes {
 })
 export class RoutingService {
   routes = Routes;
-  constructor(private router: Router) { }
+  constructor(private nav: NavController) { }
 
   gotoProductDescription() {
-    this.router.navigate([this.routes.productDescription]);
+    this.nav.navigateRoot([this.routes.productDescription]);
   }
 }

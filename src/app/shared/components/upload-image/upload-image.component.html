@@ -1,0 +1,12 @@
+
+<input #fileSystem style="display: none;" id="uploadBtn" type="file" class="upload" (change)="uploadFile($event.target)" />
+
+<div class="image">
+  <ng-container *ngIf="!uploadImageUrl">
+    <img src="assets/img/rice.png" >
+  </ng-container>
+  <ng-container *ngIf="uploadImageUrl as url">
+    <img [src]="url" />
+  </ng-container>
+  <ion-icon (click)="fileSystem.click()" slot="icon-only" name="camera"></ion-icon>
+</div>

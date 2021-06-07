@@ -1,7 +1,7 @@
 import { Component, OnInit} from '@angular/core';
 import { Observable } from 'rxjs';
-import { Store } from 'src/app/shared/models/product';
-import { ProductService } from 'src/app/shared/services/product.service';
+import { Store } from 'src/app/SharedProviders/models/product';
+import { ProductService } from 'src/app/SharedProviders/services/product.service';
 @Component({
   selector: 'app-stores',
   templateUrl: './stores.page.html',

@@ -38,3 +38,10 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
+.error-div {
+  height: 20px;
+  padding: 0px 20px;
+  ion-note {
+    font-size: 12px;
+  }
+}

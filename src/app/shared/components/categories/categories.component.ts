@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Category } from '../../models/product';
-import { ProductService } from '../../services/product.service';
+import { Category } from '../../../SharedProviders/models/product';
+import { ProductService } from '../../../SharedProviders/services/product.service';
 
 @Component({
   selector: 'app-categories',

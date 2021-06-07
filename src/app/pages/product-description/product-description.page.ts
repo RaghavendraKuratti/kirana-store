@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Product } from 'src/app/shared/models/product';
-import { ProductService } from 'src/app/shared/services/product.service';
+import { Product } from 'src/app/SharedProviders/models/product';
+import { ProductService } from 'src/app/SharedProviders/services/product.service';
 
 @Component({
   selector: 'app-product-description',

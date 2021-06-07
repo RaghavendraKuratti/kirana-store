@@ -1,23 +1,37 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './SharedProviders/guards/auth.guard';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/home',
+    redirectTo: '/login',
     pathMatch: 'full'
   },
   {
     path: 'stores',
-    loadChildren: () => import('./pages/stores/stores.module').then(m => m.StoresPageModule)
+    loadChildren: () => import('./pages/stores/stores.module').then(m => m.StoresPageModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'stores-map',
-    loadChildren: () => import('./pages/stores-map/stores-map.module').then( m => m.StoresMapPageModule)
+    loadChildren: () => import('./pages/stores-map/stores-map.module').then( m => m.StoresMapPageModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'product-description',
-    loadChildren: () => import('./pages/product-description/product-description.module').then( m => m.ProductDescriptionPageModule)
+    loadChildren: () => import('./pages/product-description/product-description.module').then( m => m.ProductDescriptionPageModule),
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'signup',
+    loadChildren: () => import('./auth/signup/signup.module').then( m => m.SignupPageModule),
+    // canActivate: [AuthGuard]
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./auth/login/login.module').then( m => m.LoginPageModule),
+    // canActivate: [AuthGuard]
   },
   {
     path: '',
@@ -27,7 +41,8 @@ const routes: Routes = [
         children : [
           {
             path: '',
-            loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
+            loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule),
+            canActivate: [AuthGuard]
           }
         ]
       },{
@@ -35,7 +50,8 @@ const routes: Routes = [
         children : [
           {
             path: '',
-            loadChildren: () => import('./pages/category/category.module').then( m => m.CategoryPageModule)
+            loadChildren: () => import('./pages/category/category.module').then( m => m.CategoryPageModule),
+            canActivate: [AuthGuard]
           }
         ]
       },{
@@ -43,7 +59,8 @@ const routes: Routes = [
         children : [
           {
             path: '',
-            loadChildren: () => import('./pages/user/user.module').then( m => m.UserPageModule)
+            loadChildren: () => import('./pages/user/user.module').then( m => m.UserPageModule),
+            canActivate: [AuthGuard]
           }
         ]
       },

@@ -1,0 +1,11 @@
+ion-header {
+  background-color: var(--ion-color-primary);
+  height: 125px;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+ion-content {
+  ion-list {
+    margin-top: 50px;
+  }
+}
